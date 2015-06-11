@@ -1,4 +1,4 @@
-<!DOCTYPE html ng-app='app'>
+<!DOCTYPE html ng-app='{{appMark}}'>
 <html>
 <head>
 	<title ng-bind="appName"></title>
@@ -25,16 +25,14 @@
 	<script type="text/javascript" src="lib/build/build.js"></script>	
 	<script type="text/javascript" src="app/common/common.helper.js"></script>
 
-	<script type="text/javascript" src="config.js"></script>
-	<script type="text/javascript" src="application.js"></script>	
+	<script type="text/javascript" src="app/config.js"></script>
+	<script type="text/javascript" src="app/application.js"></script>	
 	<script type="text/javascript" src="app/module.js"></script>	
 	
 	<script type="text/javascript" src="app/common/common.service.js"></script>
 	<script type="text/javascript" src="app/common/pomelo.service.js"></script>
 	
 	<script type="text/javascript" src="app/home/config/home.routes.js"></script>
-	
-	<script type="text/javascript" src="app/app.js"></script>
 
 	<script type="text/javascript">
 		require('boot');
