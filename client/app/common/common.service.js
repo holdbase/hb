@@ -121,12 +121,12 @@ angular.module('CommonModule').factory('cmHttp', ['$http', '$q', '$rootScope', '
         }
         /// BaseController 提交数据方式
         service.getTable = function(param, callback){
-        	service.ajaxGet('Base', 'GetTable', param, callback);
+        		service.ajaxGet('Base', 'GetTable', param, callback);
         }
 
 		/// BaseController 获得Table
         service.postEntity = function(param, callback){
-        	service.ajaxPost('Base', 'PostEntity', param, callback);
+        		service.ajaxPost('Base', 'PostEntity', param, callback);
         }
         
         service.promiseGet = function (controller, method, param) {

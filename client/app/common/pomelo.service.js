@@ -3,13 +3,13 @@
 angular.module('pomeloModule').factory('_pomelo', ['$http', function($http) {
     var service = {};
 
-    var _pomelo = window.pomelo;
+    var sPomelo = window.pomelo;
 
     var getConnector = function (uid, callback) {
         var route = 'gate.gateHandler.queryEntry';
-        _pomelo_pomelo.init({host: window.location.hostname, port: 3014, log: true}, function () {
-            _pomelo.request(route, {uid: uid}, function (data) {
-                _pomelo.disconnect();
+        sPomelo.init({host: window.location.hostname, port: 3014, log: true}, function () {
+            sPomelo.request(route, {uid: uid}, function (data) {
+                sPomelo.disconnect();
                 if (callback) callback(data);
             });
         });
@@ -18,11 +18,11 @@ angular.module('pomeloModule').factory('_pomelo', ['$http', function($http) {
     service.login = function (uid, passwd, callback) {
         var route = 'connector.entryHandler.login';
         getConnector(uid, function (data) {
-            _pomelo.init({host: data.host, port: data.port, log: true}, function(){
-                _pomelo.request(route, {uid: uid, password: passwd}, function(message){
+            sPomelo.init({host: data.host, port: data.port, log: true}, function(){
+                sPomelo.request(route, {uid: uid, password: passwd}, function(message){
                     if (message.code !== 200){
                         //if message.code !== 200 that mean is user and passwd is wrong
-                        _pomelo.disconnect();
+                        sPomelo.disconnect();
                     }
                     if (callback) callback(message);
                 });
@@ -33,9 +33,9 @@ angular.module('pomeloModule').factory('_pomelo', ['$http', function($http) {
     service.register = function (user, callback) {
         var route = 'connector.entryHandler.register';
         getConnector(uid, function (data) {
-            _pomelo.init({host: data.host, port: data.port, log: true}, function(){
-                _pomelo.request(route, {user: user}, function(message){
-                    _pomelo.disconnect();
+            sPomelo.init({host: data.host, port: data.port, log: true}, function(){
+                sPomelo.request(route, {user: user}, function(message){
+                    sPomelo.disconnect();
                     if (callback) callback(message);
                 });
             });
@@ -44,7 +44,7 @@ angular.module('pomeloModule').factory('_pomelo', ['$http', function($http) {
 
     service.send = function(message, callback){
         var route = 'message.messageHandler.sendMessage';
-        _pomelo.request(route, { hb: 'hb' }, function (data) {
+        sPomelo.request(route, { hb: 'hb' }, function (data) {
         });
     };
 
