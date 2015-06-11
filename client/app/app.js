@@ -14,17 +14,7 @@ angular.module('app').run(['$templateCache', '$rootScope', '$state', '$statePara
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
 
-        $rootScope.appName = appName;
-
-        $rootScope.hasLayout = true;
-        $rootScope.$on('onHasLayout', function (event, hasLayout) {
-            $rootScope.hasLayout = hasLayout;
-        });
-
-        $rootScope.$on('onChangeTitle', function (event, title) {
-            $rootScope.title = title;
-        });
-
+        $rootScope.appName = appName;  
 
         $rootScope.$on('onError', function (event, status, message, url) {
             switch (status) {
