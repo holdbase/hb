@@ -57,9 +57,9 @@ Handler.prototype.login = function(msg, session, next) {
 
 /// user register
 Handler.prototype.register = function(msg, session, next) {
+    var self = this;
     var username = msg.uid;
     var password = msg.password;
-
 }
 
 /// user login
