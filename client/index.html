@@ -2,10 +2,14 @@
 <html>
 <head>
 	<title>Welcome to nginx!</title>
+	
+		
 	<!-- style -->
 	<link rel="stylesheet" type="text/css" href="lib/semantic/css/semantic.min.css">
-	<!-- jquer -->
+			
+	<!-- jquery -->
 	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+	
 	<!-- angular -->
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
 	<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script>
@@ -18,25 +22,25 @@
 	<script type="text/javascript" src="lib/semantic/javascript/semantic.min.js"></script>
 	
 	<!-- pomelo -->
-	<script type="text/javascript" src="lib/build/build.js"></script>
+	<script type="text/javascript" src="lib/build/build.js"></script>	
+	<script type="text/javascript" src="app/common/prototype.func.js"></script>
 
 	<script type="text/javascript" src="config.js"></script>
-	<script type="text/javascript" src="application.js"></script>
+	<script type="text/javascript" src="application.js"></script>	
+	<script type="text/javascript" src="app/module.js"></script>	
+	
+	<script type="text/javascript" src="app/common/common.service.js"></script>
+	<script type="text/javascript" src="app/common/pomelo.service.js"></script>
+	
+	<script type="text/javascript" src="app/home/config/home.routes.js"></script>
+	
+	<script type="text/javascript" src="app/app.js"></script>
 
 	<script type="text/javascript">
 		require('boot');
 	</script>
 </head>
-<body>
-<h1>Welcome to nginx!1111</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
+<body ui-view>
 
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
 </body>
 </html>

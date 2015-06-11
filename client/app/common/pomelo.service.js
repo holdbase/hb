@@ -1,21 +1,6 @@
 'use strict';
 
-angular.module('core').factory('_http', ['$http', function($http) {
-		var service = {};
-		
-		service.post = function(url, param, success, error){
-			$http.post(url, param).success(function(data){
-				if (success) success(data);
-			}).error(function(data){
-				if (error) error(data);
-			})
-		}
-		
-		return service;	
-	}
-]);
-
-angular.module('core').factory('_pomelo', ['$http', function($http) {
+angular.module('pomeloModule').factory('_pomelo', ['$http', function($http) {
     var service = {};
 
     var _pomelo = window.pomelo;
@@ -64,4 +49,4 @@ angular.module('core').factory('_pomelo', ['$http', function($http) {
     };
 
     return service;
-});
+}]);
