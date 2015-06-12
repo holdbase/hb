@@ -1,6 +1,6 @@
 'use strict';
 
-ApplicationConfiguration.registerModule('CommonModule', []);
+ApplicationConfiguration.registerModule('commonModule', []);
 
 ApplicationConfiguration.registerModule('pomeloModule', []);
 

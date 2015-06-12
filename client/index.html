@@ -38,7 +38,11 @@
 		require('boot');
 	</script>
 </head>
-<body ui-view>
-
+<body>
+	<div class="ui top attached button">this is top menu</div> 
+	<div class="ui grid">
+    	<div class="sixteen wide column" ui-view></div> 
+  	</div>
+  	<div class="ui bottom attached button">this is footer</div>
 </body>
 </html>

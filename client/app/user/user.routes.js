@@ -1,7 +1,7 @@
 'use strict';
 
 //Setting up route
-angular.module('homeModule').config(['$stateProvider',
+angular.module('userModule').config(['$stateProvider',
 	function($stateProvider) {
 		// Projects state routing
 		$stateProvider

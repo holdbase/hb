@@ -1,14 +1,14 @@
 ﻿'use strict';
 
-angular.module('CommonModule').value('version', '0.1');
+angular.module('commonModule').value('version', '0.1');
 
-angular.module('CommonModule').constant('appKey', 'CharityPlatform');
+angular.module('commonModule').constant('appKey', 'CharityPlatform');
 
-angular.module('CommonModule').constant('appName', '上海浦东慈善基金会');
+angular.module('commonModule').constant('appName', '上海浦东慈善基金会');
 
-angular.module('CommonModule').constant('apiPrefix', 'http://localhost:4972/api');
+angular.module('commonModule').constant('apiPrefix', 'http://localhost:4972/api');
 
-angular.module('CommonModule').factory('cmCookie', ['appKey', function (appKey) {
+angular.module('commonModule').factory('_cookie', ['appKey', function (appKey) {
     var service = {};
 
     /** 
@@ -65,7 +65,7 @@ angular.module('CommonModule').factory('cmCookie', ['appKey', function (appKey) 
 }]);
 
 
-angular.module('CommonModule').factory('cmHttp', ['$http', '$q', '$rootScope', 'cmCookie', 'apiPrefix',
+angular.module('commonModule').factory('_http', ['$http', '$q', '$rootScope', 'cmCookie', 'apiPrefix',
     function ($http, $q, $rootScope, cmCookie, apiPrefix) {
         var service = {};
 
